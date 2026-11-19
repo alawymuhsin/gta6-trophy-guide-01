@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panduan Trophy GTA VI — Tracker Leonida</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="top">
+  <div class="brand">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5</p>
+    <h1>Tracker Trophy Leonida</h1>
+    <p class="sub">Panduan + pelacak offline untuk 55 trophy resmi: 1 platinum, 2 gold, 6 silver, 46 bronze &middot; 28 hidden. Semua data tersimpan di browser kamu, tanpa internet.</p>
+  </div>
+  <div class="progress-card" id="progressCard">
+    <p class="big"><span id="earnedCount">0</span><span class="of"> / 55</span></p>
+    <p id="progressLabel">0% menuju platinum</p>
+    <div class="bar" role="progressbar" aria-label="Progress platinum" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progressBar"><span id="progressFill"></span></div>
+    <p class="grades" id="gradeCounts">Platinum 0/1 &middot; Gold 0/2 &middot; Silver 0/6 &middot; Bronze 0/46</p>
+  </div>
+</header>
+<nav id="tabs" aria-label="Halaman panduan">
+  <button type="button" data-view="tracker" class="tab active" id="tabTracker">Tracker</button>
+  <button type="button" data-view="roadmap" class="tab" id="tabRoadmap">Roadmap Platinum</button>
+  <button type="button" data-view="missable" class="tab" id="tabMissable">Missable <span id="missableCount">20</span></button>
+</nav>
+<main>
+<section id="viewTracker" class="view">
+  <div class="controls" id="controls">
+    <label class="search">Cari <input id="search" type="search" placeholder="Nama, misi, atau kata kunci…" autocomplete="off"></label>
+    <label>Grade <select id="grade"><option value="all">Semua grade</option><option value="platinum">Platinum</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="bronze">Bronze</option></select></label>
+    <label>Jenis <select id="kind"><option value="all">Semua jenis</option><option value="story">Story</option><option value="mission">Misi cerita</option><option value="activity">Aktivitas</option><option value="collectible">Koleksi</option><option value="combat">Combat</option><option value="exploration">Eksplorasi</option><option value="economy">Ekonomi</option><option value="completion">100% Completion</option><option value="misc">Lainnya</option></select></label>
+    <label class="check"><input id="missableOnly" type="checkbox"> Missable saja</label>
+    <label class="check"><input id="earnedOnly" type="checkbox"> Sudah didapat saja</label>
+    <label class="check" title="Sembunyikan nama &amp; deskripsi trophy cerita/hidden sampai didapat"><input id="spoiler" type="checkbox"> Mode spoiler</label>
+    <button id="export" type="button">Export progress</button>
+    <label class="import">Import progress <input id="import" type="file" accept="application/json,.json"></label>
+    <button id="reset" type="button">Reset</button>
+  </div>
+  <p id="resultCount" class="muted">Memuat 55 trophy…</p>
+  <p id="onlineNote" class="note">Tidak ada trophy online di daftar resmi GTA VI — semua 55 trophy bisa didapat solo, offline.</p>
+  <p class="muted">Tips: klik sebuah trophy untuk membaca panduan lengkapnya di panel kanan. Centang trophy yang sudah didapat — progresmu tersimpan otomatis di browser ini.</p>
+  <div class="layout">
+    <ul id="rows" class="trophy-list" aria-label="Daftar trophy"></ul>
+    <aside id="detail" class="detail" aria-label="Panduan trophy">
+      <p class="muted">Pilih salah satu trophy di daftar untuk membaca panduannya, sumbernya, dan kapan trophy itu bisa terlewat.</p>
+    </aside>
+  </div>
+</section>
+<section id="viewRoadmap" class="view hidden">
+  <h2>Roadmap menuju platinum</h2>
+  <p>Roadmap ini disusun dari deskripsi resmi ke-55 trophy. Urutannya: cerita dulu, lalu aktivitas, lalu koleksi dan ekonomi, dan terakhir pembersihan 100%. Trophy cerita tidak bisa dikerjakan di free roam sebelum misinya terbuka, jadi selesaikan tahap 1 sebelum berburu yang lain.</p>
+  <ol class="roadmap">
+    <li><h3>Tahap 1 — Cerita: Chapter 1–4 + misi final <span class="tag">13 trophy</span></h3><p>Mainkan misi utama berurutan: <strong>Gone Fishing</strong>, Chapter 1–4, lalu misi final. Di sepanjang jalan selesaikan misi bernama <strong>Breakfast Run, The Cartel Heist, Child's Play, Headliners, VCIA Takedown</strong> dan <strong>Operation Savage Glory</strong>. Kerjakan juga rangkaian misi karakter (Andy, Kenton, Billy, Randy, Tyrone) begitu tersedia. Hasil: trophy story 2–13, 22–24, 26–27, plus gold misi final.</p></li>
+    <li><h3>Tahap 2 — Aktivitas &amp; keahlian <span class="tag">12 trophy</span></h3><p>Coba 9 jenis aktivitas (Master of None), lalu fokus: 250 stunt, 42 Shooting Range gold, 14 lokasi drone Top Fun, 20 balapan berbeda, tantangan memancing Cal, satu arcade, 8 rangkaian Strangers &amp; Freaks, 50 challenge, meditasi 18 titik, dan buruan unik untuk Bret. Sebagian besar bisa diulang sampai berhasil.</p></li>
+    <li><h3>Tahap 3 — Koleksi &amp; eksplorasi <span class="tag">6 trophy</span></h3><p>Jelajahi 52 area Leonida, temukan 100 kendaraan, lengkapi 3 set kartu koleksi, WAiNK It di 100 lokasi, beli 8 garasi, dan daftarkan 10 kendaraan ke Scooter Bros. Kerjakan sambil menjelajah agar tiap perjalanan menghitung untuk beberapa trophy sekaligus.</p></li>
+    <li><h3>Tahap 4 — Perampokan &amp; ekonomi <span class="tag">8 trophy</span></h3><p>Rampok 5 brankas bank, 1 truk lapis baja, dan operasi ilegal 9 geng; rampok 3 toko beruntun bersama partner; rampok toko perhiasan tanpa terdeteksi; cuci Marked Bills $250.000; dan belanjakan $100.000 di toko. Siapkan kendaraan pelarian untuk setiap aksi.</p></li>
+    <li><h3>Tahap 5 — Pembersihan &amp; 100% <span class="tag">sisanya + platinum</span></h3><p>Selesaikan trophy momen (koktail Ocean Beach, showroom, bowling, kemitraan, pilihan, percobaan kedua, kejadian aneh, melee drive-by, wanted bintang 4 bersama partner), lalu kejar <strong>100% Completion</strong> (gold). Begitu 54 trophy lain terkumpul, <strong>Vice Got a Price!</strong> (platinum) terbuka sendiri.</p></li>
+  </ol>
+  <p class="note">Sumber roadmap: deskripsi resmi tiap trophy pada daftar Exophase dan PSNProfiles. Jumlah target (42, 14, 20, 18, 52, 100, 9, 8, 10, 5, 3, 50, 250) berasal dari deskripsi resmi dan hitungan PSN.</p>
+</section>
+<section id="viewMissable" class="view hidden">
+  <h2>Trophy missable — yang perlu diwaspadai</h2>
+  <p>20 trophy di bawah ini terikat pada momen cerita atau aksi satu kali kesempatan. Artinya: kerjakan dengan hati-hati saat momennya tiba, dan gunakan save manual atau replay misi bila tersedia. Trophy lain bisa diulang di free roam kapan saja, jadi tidak perlu cemas.</p>
+  <ul id="missableList" class="trophy-list"></ul>
+  <p class="note">Flag missable di sini dibangun dari deskripsi resmi: trophy yang mensyaratkan penyelesaian satu misi atau chapter tertentu, atau satu aksi spesifik yang hanya bisa dilakukan pada momen tertentu. Daftar lengkap beserta alasannya ada di panduan tiap trophy.</p>
+</section>
+</main>
+<footer>
+  <p>Sumber data resmi: <span id="sourceLinks">daftar trophy Exophase dan PSNProfiles</span>. Panduan ditulis dengan kata-kata sendiri untuk entry ini dan mengutip sumbernya di tiap trophy. Tanpa logo atau artwork Rockstar Games. Aplikasi ini bekerja offline sepenuhnya.</p>
+  <p class="muted">Dibuat untuk kompetisi make.fun “Build the best GTA 6 trophy guide”.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
